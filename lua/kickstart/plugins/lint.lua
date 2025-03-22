@@ -6,7 +6,10 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
+        clojure = { 'clj-kondo' },
+        dockerfile = { 'hadolint' },
         markdown = { 'markdownlint' },
+        janet = { 'janet' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
